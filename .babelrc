@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "6.9"
+      }
+    }],
+    "react"
+  ],
+  "plugins": [
+    ["css-modules-transform", {
+      "extensions": [".scss"],
+      "preprocessCss": "./process-sass.js",
+      "generateScopedName": "[name]-[local]"
+    }],
+    ["transform-assets", {
+      "extensions": ["png", "jpg", "gif"],
+      "name": "/[name]-[sha512:hash:base64:7].[ext]"
+    }],
+    "transform-object-rest-spread"
+  ]
+}
